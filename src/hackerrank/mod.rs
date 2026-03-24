@@ -1,5 +1,6 @@
-mod task01;
-mod task02;
+mod Staircase;
+mod GradingStudents;
+mod AppleAndOrange;
 mod task03;
 mod task04;
 mod task05;

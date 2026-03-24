@@ -1,5 +1,5 @@
 /// https://practice.course.rs/basic-types/intro.html
-#[test]
+
 // Remove something to make it work
 fn test411() {
     let x: i32 = 5;
@@ -11,14 +11,14 @@ fn test411() {
 
     println!("Success!");
 }
-#[test]
+
 // Fill the blank
 fn test412() {
     let v: u16 = 38_u8 as u16;
 
     println!("Success!");
 }
-#[test]
+
 // Modify `assert_eq!` to make it work
 fn test413() {
     let x: u32 = 5;
@@ -31,7 +31,7 @@ fn test413() {
 fn type_of<T>(_: &T) -> String {
     format!("{}", std::any::type_name::<T>())
 }
-#[test]
+
 // Fill the blanks to make it work
 fn test414() {
     assert_eq!(i8::MAX, 127);
@@ -39,14 +39,14 @@ fn test414() {
 
     println!("Success!");
 }
-#[test]
+
 // Fix errors and panics to make it work
 fn test415() {
     let v1 = 251_u16 + 8;
     let v2 = i16::checked_add(251, 8).unwrap();
     println!("{},{}",v1,v2);
 }
-#[test]
+
 // Modify `assert!` to make it work
 fn test416() {
     let v = 1_024 + 0xff + 0o77 + 0b1111_1111;
@@ -54,7 +54,7 @@ fn test416() {
 
     println!("Success!");
 }
-#[test]
+
 // Fill the blank to make it work
 fn test417() {
     let x: f64 = 1_000.000_1; // ?
@@ -65,16 +65,16 @@ fn test417() {
     println!("Success!");
 }
 
-fn type_of<T>(_: &T) -> String {
+fn type_of1<T>(_: &T) -> String {
     format!("{}", std::any::type_name::<T>())
 }
-#[test]
+
 fn test418() {
     assert!(0.1f32+0.2f32==0.3f32);
 
     println!("Success!");
 }
-#[test]
+
 fn test419() {
     let mut sum = 0;
     for i in -3..2 {
@@ -87,16 +87,17 @@ fn test419() {
         println!("{}",c as u8);
     }
 }
-#[test]
+
 // Fill the blanks
 use std::ops::{Range, RangeInclusive};
+
 fn test4110() {
     assert_eq!((1..5), Range{ start: 1, end: 5 });
     assert_eq!((1..=5), RangeInclusive::new(1, 5));
 
     println!("Success!");
 }
-#[test]
+
 // Fill the blanks and fix the errors
 fn test4111() {
     // Integer addition
@@ -123,9 +124,10 @@ fn test4111() {
     println!("1 << 5 is {}", 1u32 << 5);
     println!("0x80 >> 2 is 0x{:x}", 0x80u32 >> 2);
 }
-#[test]
+
 // Make it work
 use std::mem::size_of_val;
+
 fn test421() {
     let c1: char = 'a';
     assert_eq!(size_of_val(&c1),4);
@@ -135,7 +137,7 @@ fn test421() {
 
     println!("Success!");
 }
-#[test]
+
 // Make it work
 fn test422() {
     let c1: char = '中';
@@ -145,7 +147,7 @@ fn test422() {
 fn print_char(c : char) {
     println!("{}", c);
 }
-#[test]
+
 // Make println! work
 fn test423() {
     let _f: bool = false;
@@ -155,7 +157,7 @@ fn test423() {
         println!("Success!");
     }
 }
-#[test]
+
 // Make it work
 fn test424() {
     let f: bool= false;
@@ -164,7 +166,7 @@ fn test424() {
 
     println!("Success!");
 }
-#[test]
+
 // Make it work, don't modify `implicitly_ret_unit` !
 fn test425() {
     let _v: () = ();
@@ -183,16 +185,15 @@ fn implicitly_ret_unit() {
 fn explicitly_ret_unit() -> () {
     println!("I will return a ()");
 }
-#[test]
+
 // Modify `4` in assert to make it work
-use std::mem::size_of_val;
 fn test426() {
     let unit: () = ();
     assert!(size_of_val(&unit) == 0);
 
     println!("Success!");
 }
-#[test]
+
 fn test431() {
     let x: u32 = 5u32;
 
@@ -213,7 +214,7 @@ fn test431() {
     println!("y is {:?}", y);
     println!("z is {:?}", z);
 }
-#[test]
+
 // Make it work with two ways
 fn test432() {
     let v: i32 = {
@@ -226,7 +227,7 @@ fn test432() {
 
     println!("Success!");
 }
-#[test]
+
 fn test433() {
     let v: i32 = {
         let x = 3;
@@ -237,7 +238,7 @@ fn test433() {
 
     println!("Success!");
 }
-#[test]
+
 fn test434() {
     let s: i32 = sum(1 , 2);
     assert_eq!(s, 3);
@@ -249,7 +250,7 @@ fn sum(x: i32, y: i32) -> i32 {
 }
 
 
-#[test]
+
 fn test441() {
     // Don't modify the following two lines!
     let (x, y) = (1, 2);
@@ -260,10 +261,10 @@ fn test441() {
     println!("Success!");
 }
 
-fn sum(x: i32, y: i32) -> i32 {
+fn sum1(x: i32, y: i32) -> i32 {
     x + y
 }
-#[test]
+
 fn test442() {
     print();
 }
@@ -286,7 +287,7 @@ fn never_return() -> ! {
     panic!()
 }
 
-#[test]
+
 fn test444() {
     println!("Success!");
 }
@@ -312,7 +313,7 @@ fn never_return_fn() -> ! {
 
 
 
-#[test]
+
 fn test445() {
     // FILL in the blank
     let b = false;

@@ -3,18 +3,16 @@
 // Remove something to make it work
 fn test411() {
     let x: i32 = 5;
-    let mut y = 5;
+    let _y = x;
 
-    y = x;
-
-    let z: i32 = 10; // Type of z ?
+    let _z: i32 = 10; // Type of z ?
 
     println!("Success!");
 }
 
 // Fill the blank
 fn test412() {
-    let v: u16 = 38_u8 as u16;
+    let _v: u16 = 38_u8 as u16;
 
     println!("Success!");
 }
@@ -58,8 +56,8 @@ fn test416() {
 // Fill the blank to make it work
 fn test417() {
     let x: f64 = 1_000.000_1; // ?
-    let y: f32 = 0.12; // f32
-    let z: f64 = 0.01_f64; // f64
+    let _y: f32 = 0.12; // f32
+    let _z: f64 = 0.01_f64; // f64
 
     assert_eq!(type_of(&x), "f64".to_string());
     println!("Success!");
@@ -171,7 +169,7 @@ fn test424() {
 fn test425() {
     let _v: () = ();
 
-    let v: (i32, i32)= (2, 3);
+    let _tuple: (i32, i32)= (2, 3);
     assert_eq!(_v, implicitly_ret_unit());
 
     println!("Success!");
@@ -279,7 +277,7 @@ fn print() {
 fn test443() {
     never_return();
 
-    println!("Failed!");
+    // println!("Failed!");
 }
 
 fn never_return() -> ! {

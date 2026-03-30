@@ -1,7 +1,7 @@
-mod Staircase;
-mod GradingStudents;
-mod AppleAndOrange;
-mod task03;
+mod staircase;
+mod grading_students;
+mod apple_and_orange;
+mod number_line_jumps;
 mod task04;
 mod task05;
 mod task06;

@@ -1,5 +1,4 @@
 /// https://practice.course.rs/basic-types/intro.html
-
 // Remove something to make it work
 fn test411() {
     let x: i32 = 5;

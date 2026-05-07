@@ -2,7 +2,7 @@ use std::env;
 use std::fs::File;
 use std::io::{self, BufRead, Write};
 
-fn diagonalDifference(arr: &[Vec<i32>]) -> i32 {
+fn diagonal_difference(arr: &[Vec<i32>]) -> i32 {
     let n = arr.len();
     let mut primary = 0;
     let mut secondary = 0;
@@ -44,7 +44,7 @@ fn main() {
         arr.push(row);
     }
 
-    let result = diagonalDifference(&arr);
+    let result = diagonal_difference(&arr);
 
     writeln!(&mut fptr, "{}", result).unwrap();
 }
@@ -61,6 +61,6 @@ mod tests {
             vec![9, 8, 9],
         ];
 
-        assert_eq!(diagonalDifference(&matrix), 2);
+        assert_eq!(diagonal_difference(&matrix), 2);
     }
 }

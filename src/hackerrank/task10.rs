@@ -13,7 +13,7 @@ pub fn sock_merchant(socks: &[i32]) -> i32 {
     map.values().map(|count| count / 2).sum()
 }
 
-fn sockMerchant(_n: i32, ar: Vec<i32>) -> i32 {
+fn sock_merchant_hr(_n: i32, ar: Vec<i32>) -> i32 {
     sock_merchant(&ar)
 }
 
@@ -34,7 +34,7 @@ fn main() {
         .map(|s| s.parse::<i32>().unwrap())
         .collect();
 
-    let result = sockMerchant(n, ar);
+    let result = sock_merchant_hr(n, ar);
 
     writeln!(&mut fptr, "{}", result).ok();
 }
